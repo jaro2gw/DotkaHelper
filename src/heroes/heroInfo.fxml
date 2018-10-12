@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"-->
+<!--prefHeight="122.0" prefWidth="210.0" style="-fx-border-color: black; -fx-border-width: 4;"-->
+<!--GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"-->
+<!--GridPane.valignment="CENTER">-->
+<!--<children>-->
+<!--<Pane fx:id="bordersPane" layoutX="3.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity"-->
+<!--minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="204.0"-->
+<!--style="-fx-border-color: transparent; -fx-border-style: solid; -fx-border-width: 2;">-->
+<!--<children>-->
+<!--<ImageView fx:id="heroImg" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"-->
+<!--preserveRatio="true" x="2.0" y="2.0"/>-->
+<!--</children>-->
+<!--<opaqueInsets>-->
+<!--<Insets/>-->
+<!--</opaqueInsets>-->
+<!--<padding>-->
+<!--<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>-->
+<!--</padding>-->
+<!--</Pane>-->
+<!--</children>-->
+<!--</Pane>-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox alignment="CENTER" maxHeight="500.0" spacing="15.0"
+      style="-fx-background-image: url('heroInfoBack.png'); -fx-background-size: 100% 100%; -fx-border-color: black;"
+      xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heroes.HeroInfoController">
+    <opaqueInsets>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="122.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="exitBtn" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"
+                           GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <image>
+                        <Image url="exitImage.png"/>
+                    </image>
+                </ImageView>
+                <Text fx:id="name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="TrajanPro-Bold" size="24.0"/>
+                    </font>
+                </Text>
+                <Pane fx:id="bordersPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                      prefHeight="124.0" prefWidth="212.0"
+                      style="-fx-border-color: black, transparent; -fx-border-insets: 0, 4; -fx-border-width: 4, 2; -fx-border-style: solid, solid;"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <children>
+                        <ImageView fx:id="heroImg" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="6.0"
+                                   y="6.0"/>
+                    </children>
+                </Pane>
+                <TextFlow textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"
+                          GridPane.valignment="CENTER">
+                    <children>
+                        <Text fx:id="atk" fill="#979797" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+                        <Text fx:id="cats" fill="#979797" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+                    </children>
+                    <padding>
+                        <Insets top="10.0"/>
+                    </padding>
+                </TextFlow>
+                <Text fx:id="description" fill="#979797" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0"/>
+                    </font>
+                </Text>
+            </children>
+        </GridPane>
+        <TextFlow textAlignment="RIGHT">
+            <children>
+                <Hyperlink fx:id="webLink" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" text="MORE INFO"/>
+            </children>
+        </TextFlow>
+    </children>
+</VBox>
